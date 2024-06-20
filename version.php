@@ -24,10 +24,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$plugin->version = 2024061700;
+$plugin->requires = 2022112802.00; // 4.1.2 (Build: 20230313)
 $plugin->component = 'tiny_inokufu';
-$plugin->release = '1.0.0';
-$plugin->version = 2024022900;
+$plugin->maturity = MATURITY_STABLE;
+$plugin->release = '1.0.1';
+$plugin->supported = [410, 420];
 
 $plugin->dependencies = [
-    'repository_inokufu' => 2022051300  // Needs repository plugin to be useful
+    'repository_inokufu' => 2024061700  // Needs repository plugin to be useful
 ];

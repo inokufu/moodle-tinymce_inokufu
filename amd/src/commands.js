@@ -36,7 +36,7 @@ const makeInoSearch = (editor) => {
     if (canShowFilePicker) {
         displayFilepicker(editor, 'link').then((params) => {
             if (params.url !== '') {
-                fetch(params.url).then(html => {
+                fetch(params.url + '/preview').then(html => {
                     html.text().then(output => {
                         editor.insertContent(output);
                     });
